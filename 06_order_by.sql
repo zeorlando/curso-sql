@@ -6,13 +6,10 @@
 
 -- LIMIT 10;
 
-SELECT idCliente,
-       qtdePontos,
-       datetime(substr(DtCriacao, 1, 19)) AS Data
+SELECT *
 
 FROM clientes
 
-ORDER BY Data ASC, qtdePontos DESC
+WHERE flTwitch = 1
 
-LIMIT 10
-
+ORDER BY DtCriacao ASC, QtdePontos DESC
